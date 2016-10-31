@@ -1,0 +1,31 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+div {
+  float: left;
+  height: 50%;
+  width: 50%;
+  background-color: #444;
+}
+
+div:nth-child(2) {
+  background-color: cyan;
+}
+
+div:nth-child(3) {
+  background-color: magenta;
+}
+
+div:nth-child(4) {
+  background-color: lawngreen;
+}
