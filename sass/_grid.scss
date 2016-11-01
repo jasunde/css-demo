@@ -1,0 +1,8 @@
+$numColumns: 12;
+
+@for $i from 1 through $numColumns {
+  .col-#{$i} {
+    float: left;
+    width: 100% * ($i / $numColumns);
+  }
+}

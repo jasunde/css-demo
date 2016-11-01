@@ -1,0 +1,69 @@
+@import 'reset';
+@import 'grid';
+
+html {
+  font-family: Helvetica, sans-serif;
+}
+.container {
+  @extend .clearfix;
+  height: 100vh;
+  width: 100%;
+}
+
+.row {
+  height: 33.33333%;
+  @extend   .clearfix;
+}
+
+[class*="col-"] {
+  height: 100%;
+  padding: 5px;
+  position: relative;
+}
+
+[class*="col-"] div {
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+[class*="col-"] a {
+  display: block;
+  text-decoration: none;
+}
+
+[class*="col-"] a,
+.number {
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.curtain:hover > div {
+  visibility: hidden;
+}
+
+body [class*="col-"]:nth-child(4n) {
+  background-color: cyan;
+}
+
+body [class*="col-"]:nth-child(4n+1) {
+  background-color: magenta;
+}
+
+body [class*="col-"]:nth-child(4n+2) {
+  background-color: lawngreen;
+}
+
+body [class*="col-"]:nth-child(4n+3) {
+  background-color: #aaa;
+}
